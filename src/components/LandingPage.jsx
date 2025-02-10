@@ -2,7 +2,10 @@ import Header from "./Header"
 import Hero from "./Hero"
 import ProductList from "./ProductList"
 
+// 
+
 const LandingPage = () => {
+
   return (
     <div>
         <Header />
@@ -14,3 +17,4 @@ const LandingPage = () => {
 }
 
 export default LandingPage
+// 
