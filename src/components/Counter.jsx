@@ -21,6 +21,16 @@ const Counter = () => {
     setShow(true)
   };
 
+  const fetchProducts = async ()=>{
+    try {
+      const resposne = await fetch("http://localhost:4000/users")
+      const data = await resposne.blob()
+      console.log(data);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <div
       style={{
@@ -44,7 +54,7 @@ const Counter = () => {
         id="email"
         onChange={handleInput}
       />
-      <button onClick={handleClick}>Show</button>
+      <button onClick={fetchProducts}>Show</button>
 
       <div>
         {show ? (
@@ -61,3 +71,4 @@ const Counter = () => {
 };
 
 export default Counter;
+// named export 
