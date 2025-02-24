@@ -11,11 +11,14 @@ import Signup from "./pages/Signup"
 import Login from "./pages/Login"
 import { Toaster } from "sonner"
 import Dashboard from "./pages/(protected)/Dashboard"
+import AuthProvider from "./contexts/AuthContext"
 
 const App = () => {
   return (
     <div>
      <BrowserRouter>
+
+     <AuthProvider>
         <Navbar />
         <Toaster richColors visibleToasts={1} position="top-right" closeButton />
       <Routes>
@@ -34,6 +37,7 @@ const App = () => {
         <Route path="*" element={<Notfound />}/>
       </Routes>
       <Footer />
+     </AuthProvider>
      </BrowserRouter>
     </div>
   )
